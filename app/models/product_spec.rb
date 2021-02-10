@@ -1,4 +1,7 @@
 require 'rails_helper'
+require "capybara/rails"
+require "capybara/rspec"
+require "capybara/poltergeist"
 
 RSpec.describe Product, type: :model do
   describe 'Validations' do
@@ -28,3 +31,4 @@ RSpec.describe Product, type: :model do
     end
   end
 end
+Capybara.javascript_driver = :poltergeist
